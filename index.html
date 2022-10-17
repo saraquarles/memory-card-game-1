@@ -6,9 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Memory Card Game</title>
     <link rel="stylesheet" href="./style.css" />
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <script src="./script.js" defer></script>
+    <script src="confetti.js"></script>
 </head>
 <body>
+    <header>
+        <p><h1>Memory Card Game</h1></p>
+    </header>
+    <div class="features">
+            <p><button type="button" onClick="refreshPage()">Restart</button></p>
+            <!-- <p><h2 id="message"></h2></p> -->
+    </div>
+    <main>
+    <section>
     <div class="game-board">
         <ul class="cards">
             <li class="card">
@@ -141,5 +152,7 @@
             </li>
         </ul>
     </div>
+</section>   
+</main> 
 </body>
 </html>
