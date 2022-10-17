@@ -5,6 +5,10 @@ let matchedPairs = 0;
 let cardOne, cardTwo;
 let disableDeck = false;
 
+function refreshPage() {
+    window.location.reload();
+}
+
 function flipCard(evt) { // take an event object's as a scoped variable
     // console.log('flipCard was executed');
     // console.log(evt);
@@ -47,6 +51,7 @@ function matchCards (img1, img2) {
     matchedPairs++; // if the card images match, we can increment the global `matchedPairs` variable by 1 match     
     if (matchedPairs == 8) { // if your number of matches is 8, you've made all the matches! Game Won!
         console.log('YOU WIN!');
+        youWin();
         return; // for now, lets call this game over, end this function and do nothing else.
         }
     // everything below will execute if the game has not yet been won...    
@@ -68,4 +73,14 @@ function matchCards (img1, img2) {
         disableDeck = false;
         return;
     }, 1200);
+}
+
+function youWin() {
+    // message.innerHTML = `<span class="you won">You Won!</span>`
+    startConfetti();
+    return;
+}
+
+function startGame() {
+
 }
